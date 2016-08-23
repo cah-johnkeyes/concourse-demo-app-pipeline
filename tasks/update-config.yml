@@ -1,0 +1,18 @@
+platform: linux
+
+image_resource:
+    type: docker-image
+    source:
+        repository: java
+        tag: latest
+
+inputs:
+  - name: build-config
+  - name: published-artifacts
+
+run:
+    path: "cp"
+    args: ["published-artifacts/VERSION", "build-config/VERSION_TO_DEPLOY"]
+
+params:
+    TERM: -dumb

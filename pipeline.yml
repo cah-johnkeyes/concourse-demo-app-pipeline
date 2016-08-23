@@ -37,6 +37,9 @@ jobs:
           REPO_URL: {{REPO_URL}}
           REPO_USERNAME: {{REPO_USERNAME}}
           REPO_PASSWORD: {{REPO_PASSWORD}}
+      - task: update-deploy-config
+        priviledged: true
+        file: pipeline/tasks/update-config.yml
   - name: deploy
     plan:
       - get: pipeline
