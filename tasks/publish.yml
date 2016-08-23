@@ -17,7 +17,7 @@ outputs:
 #     path: "gradle"
 #     args: ["--build-file", "app/build.gradle", "assemble", "publish", "-PrepoUrl=$REPO_URL", "-PrepoUsername=$REPO_USERNAME", "-PrepoPassword=$REPO_PASSWORD"]
 run:
-    path: sh
+    path: "app/ci/tasks/publish.sh"
     args: ["app", "published-artifacts"]
 
 params:
