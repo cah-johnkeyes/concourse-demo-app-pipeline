@@ -27,6 +27,7 @@ jobs:
   - name: publish
     plan:
       - get: deploy-config
+      - put: deploy-config
       - get: pipeline
       - get: source-code
         passed: [unit-test]
