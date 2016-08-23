@@ -7,12 +7,12 @@ image_resource:
         tag: latest
 
 inputs:
-  - name: build-config
+  - name: deploy-config
   - name: published-artifacts
 
 run:
     path: "cp"
-    args: ["published-artifacts/VERSION", "build-config/VERSION_TO_DEPLOY"]
+    args: ["published-artifacts/VERSION", "deploy-config/VERSION_TO_DEPLOY"]
 
 params:
     TERM: -dumb
