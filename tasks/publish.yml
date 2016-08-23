@@ -10,9 +10,15 @@ inputs:
   - name: source-code
     path: app
 
+outputs:
+  - name: published-artifacts
+
+# run:
+#     path: "gradle"
+#     args: ["--build-file", "app/build.gradle", "assemble", "publish", "-PrepoUrl=$REPO_URL", "-PrepoUsername=$REPO_USERNAME", "-PrepoPassword=$REPO_PASSWORD"]
 run:
-    path: "gradle"
-    args: ["--build-file", "app/build.gradle", "assemble", "publish", "-PrepoUrl=$REPO_URL", "-PrepoUsername=$REPO_USERNAME", "-PrepoPassword=$REPO_PASSWORD"]
+    path: sh
+    args: ["app", "published-artifacts"]
 
 params:
     TERM: -dumb
