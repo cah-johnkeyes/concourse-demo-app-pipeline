@@ -32,7 +32,7 @@ jobs:
         trigger: true
       - task: publish
         priviledged: true
-        file: pipeline/tasks/assemble-publish.yml
+        file: pipeline/tasks/publish.yml
         params:
           REPO_URL: {{REPO_URL}}
           REPO_USERNAME: {{REPO_USERNAME}}
