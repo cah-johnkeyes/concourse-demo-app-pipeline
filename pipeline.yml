@@ -26,6 +26,7 @@ jobs:
         file: pipeline/tasks/unit-test.yml
   - name: publish
     plan:
+      - get: deploy-config
       - get: pipeline
       - get: source-code
         passed: [unit-test]

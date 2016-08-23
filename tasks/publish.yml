@@ -14,7 +14,7 @@ outputs:
   - name: published-artifacts
 
 run:
-    path: "pipeline/ci/tasks/publish.sh"
+    path: "pipeline/tasks/publish.sh"
     args: ["source-code", "published-artifacts"]
 
 params:
