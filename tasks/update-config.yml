@@ -10,6 +10,9 @@ inputs:
   - name: deploy-config
   - name: published-artifacts
 
+outputs:
+    - name: put
+
 run:
     path: "cp"
     args: ["published-artifacts/VERSION", "put/VERSION_TO_DEPLOY"]
