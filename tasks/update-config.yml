@@ -12,7 +12,7 @@ inputs:
 
 run:
     path: "cp"
-    args: ["published-artifacts/VERSION", "deploy-config/VERSION_TO_DEPLOY"]
+    args: ["published-artifacts/VERSION", "put/VERSION_TO_DEPLOY"]
 
 params:
     TERM: -dumb
